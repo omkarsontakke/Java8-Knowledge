@@ -8,6 +8,30 @@ public class Mock_30122025 {
     public static void main(String[] args) {
         System.out.println("Started day 30 of java 8");
 
+
+
+        List<Customer> customers = List.of(
+                new Customer("Amit", "Mumbai",
+                        List.of(
+                                new Order("O1", 1200, "DELIVERED"),
+                                new Order("O2", 800, "NEW")
+                        )
+                ),
+                new Customer("Neha", "Pune",
+                        List.of(
+                                new Order("O3", 4000, "DELIVERED")
+                        )
+                ),
+                new Customer("Rohan", "Mumbai", null),
+                new Customer("Priya", "Delhi", List.of()),
+                new Customer("Vikram", "Pune",
+                        List.of(
+                                new Order("O4", 2500, "CANCELLED"),
+                                new Order("O5", 3200, "DELIVERED")
+                        )
+                )
+        );
+
 //        Q.1. Find duplicate elements in a list
         List<String> list = Arrays.asList("apple", "banana", "apple", "orange", "banana");
         Set<String> listEle = new HashSet<>();
@@ -33,7 +57,24 @@ public class Mock_30122025 {
                 .map(Map.Entry::getKey)
                 .findFirst();
 
-        System.out.println(first.get());
+//        System.out.println(first.get());
+
+
+//        Q.4 Convert a list of strings to a map
+
+        List<String> listFruit = Arrays.asList("apple", "banana", "orange");
+
+        Map<String, Integer> fruitOfLength = listFruit.stream().collect(Collectors.toMap(Function.identity(),String::length));
+//        System.out.println("Count each fruit name length : "+fruitOfLength);
+
+
+//        5. Find all Customers where order is greater than 1
+
+        List<Customer> listOfCustGreaterThanOneOrder = customers.stream()
+                .filter(c -> c.getOrders()!=null)
+                .filter(e -> e.getOrders().size() > 1).toList();
+        System.out.println(listOfCustGreaterThanOneOrder);
+
 
     }
 
