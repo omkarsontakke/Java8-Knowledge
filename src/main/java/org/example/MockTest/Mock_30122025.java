@@ -21,7 +21,7 @@ public class Mock_30122025 {
 //        System.out.println("Occurrence of each elements in the list : "+occurrenceOfEachElemInList);
 
 
-//        Find the first non-repeated character in a string
+//       Q.3 Find the first non-repeated character in a string
 
         String cityName = "india";
 
