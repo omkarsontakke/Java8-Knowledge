@@ -68,7 +68,7 @@ public class Mock_30122025 {
 //        System.out.println("Count each fruit name length : "+fruitOfLength);
 
 
-//        5. Find all Customers where order is greater than 1
+//        Q.5. Find all Customers where order is greater than 1
 
         List<Customer> listOfCustGreaterThanOneOrder = customers.stream()
                 .filter(c -> c.getOrders()!=null)
