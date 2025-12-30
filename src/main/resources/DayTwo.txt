@@ -1,0 +1,49 @@
+1. When should you use filter() before map() and when should you use map() before filter()?
+Ans:- So basically we use the filter when you want the data on specific condition, and we use the map when you want to perform the task on each element.
+    use filter() before map -> when you want to perform some condition if it is satisfied then only you want to apply some logic
+
+    Use Map before filter() ->  When filtering depends on the transformed value.
+
+2. In which situation would you use peek()?
+Ans:- peek method is used when you filter the data on that filter data you want to perform the any operation.
+      like we have to increase the salary of the employee whoes employee rating is greater than 3
+
+      Use peak() when you want to debug/logging the code .
+
+    Explain why peek() should not be used to modify data and when it is safe to use it.
+    - coz it break the rule of functional programming
+    - Hard for debuggig
+
+
+3. When should you use reduce()?
+Ans:- So reduce method is used to perform the some mathematically operation, like you want the sum of expense done by employee
+    Give a real example where collect() does not help but reduce() is the correct solution.
+    - When you want to find the total salary of the employees.
+
+4. When should you use Comparator.comparing() vs thenComparing()?
+Ans:- When you want the sorted data based on the salary, and if salary is also same then sort based on the name of the employee.
+Give a scenario where sorting requires:
+
+    primary key
+    -No idea
+    secondary key
+    -No idea
+
+Example: sort employees by salary, then by name.
+    List<Employee> sortThaSal = employeeList.stream()
+                    .sorted(Comparator.comparing(Employee::getSalary)
+                            .thenComparing(Employee::getName)).toList();
+
+5. When should you use Collectors.toMap() and when does it throw an exception?
+Ans:- When you want to create the map on the bais of the list or object.
+Explain:
+
+duplicate keys
+=> (oldValue, newValue) -> newValue
+
+how to handle duplicates
+
+how to supply LinkedHashMap / TreeMap / HashMap
+
+toMap -> default hashmap return
+, TreeMap::new

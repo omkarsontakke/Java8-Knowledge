@@ -1,0 +1,23 @@
+1. When should you use distinct() and when will it fail?
+
+    Give a scenario where distinct() does not remove duplicates because your custom class does not implement equals() and hashCode().
+
+2. When should you use skip() and limit()?
+
+    Give a real scenario such as pagination where these two methods make sense together.
+
+3. When should you use Stream.builder()?
+
+    Explain with a scenario where you need to build a stream conditionally, adding elements only if certain conditions are true.
+
+4. When should you use Collectors.counting() vs stream().count()?
+
+    Give a scenario where collecting with counting is required instead of using .count() directly.
+
+5. When should you use flatMap() on a Map<Key, List<Value>>?
+
+    Give a scenario where you want:
+
+    A single list of all values
+
+    Or you want to process values across all keys in one shot

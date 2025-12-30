@@ -1,0 +1,210 @@
+Q.1 What are all features of java8 did you know?
+Ans:- 1.Functional Interface(Include default & static method).
+      2.Lambda Expression
+      3.Stream
+      4.CompatableFeature
+      5.Java DataTime
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Q.2 What is the Functional Interface?
+Ans:- An Interface that contains only one abstract methods is known as FI.
+      Note:  It can have any number of default and static method.
+             default method use: Interface dont force to overide the default method , it total depend on the requiremnt
+             static method use: If you are using the same login in the Utility class, then you can use it in the Interface for the frequently task.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Q.3 Can you tell few FI which is already there before java 8?
+Ans:- Runnable -> run method is present
+      Callable -> call methos is present
+      Comparator(Interview migh ask about equals() method inside comparator)
+      In Comparator there are two methds, one is compare and second is equal methos that overide from the object class.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Q.4 Can you write one FI?
+Ans: Yes,
+    Example:
+        @FunctionalInterface
+        public interface UPIPayment {
+            public String doPayment(String source, String destination);
+
+            default double getCoupon() {
+                return new Random().nextDouble();
+            }
+
+            static String datePattern(String pattern) {
+                SimpleDateFormat formatter = new SimpleDateFormat(pattern);
+                return formatter.format(new Date());
+            }
+        }
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Q.5 Can we extends FI from another FI?
+Ans:- Yes, We can extends bt after extend out Interface don't act as the FI
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Q.6 What are the all FI introduce in java8?
+Ans:- 1.Function  -> apply method , R apply(T t)
+      2.Predicate -> test method , boolean test(T t);
+      3.Consumer  -> accept method , void accept(T t)
+      4.Supplier  -> get method , T get();
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Q.7 What is the lambda Expression?
+Ans:- LE is basically express instance of FI, In another word It provide a clear and concise way to represent method of a functional using expression.
+    Example:
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Q.8 What's are the advantages and disadvantages of LE?
+Ans:-
+    Adv:
+        1.Avoid writing anonymous impl.
+        2.It saves a lot of code.
+        3.The code is directly readble without interpretation.
+    DisAdv:
+        1.Hard to use without an IDE.
+        2.Complex to debug.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Q 9. What is Stream API?
+Ans:- It is used to process collections of object wih functional style of coding using LE.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Q.10 What is the Stream in java 8?
+Ans:- A Stream is a sequence of object that support various methods which can be pipelined to produce the desired result.
+    *Features*:
+       1. A Stream is not a data structure instead it takes input from the collections, Arrays or I/O channels.
+       2. Streams don't change the original data structure, they only provide the result as per the pipelined methods.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Q.11 Method Reference
+Ans:- Method refrence is the shorthand notation of a LE to call a method
+    Example : numList.stream.filter(n %2 == 0).sorted().forEach(System.out::Println);
+    1.Static method reference
+    2.Instance method reference
+    Example :
+        public static void main(String[] args) {
+
+                List<Integer> numbers =  Arrays.asList(2,6,1,8,5);
+
+                TestClass testClassObj = new TestClass();
+
+                //Using Static method when method is static
+                numbers.stream().filter(number -> number % 2 == 0).forEach( TestClass::printElementsStatic);
+
+                // Using Instead method when method is not an static
+                numbers.stream().filter(number -> number % 2 == 0).forEach( testClassObj::printElementsNonStatic);
+            }
+
+
+            // When method is static
+            public static void printElementsStatic(int i){
+                System.out.println(i);
+            }
+
+            //When mwthod is not an static
+            public void printElementsNonStatic(int i){
+                System.out.println(i);
+            }
+        }
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Q.12 Spell few methods that you have used in your project?
+Ans:- Filter,forEach,Sorted,map,flatMap,reduce,groupingBy,count and collect
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Q.13 When to use map and flatMap in java8?
+Ans:- for 1:1 then go with map, if 1:M then go with the flatMap.
+    Example:
+    List<Users> users = Stream.of(
+                            new Users("Omkar", 865723, Arrays.asList("om@gmail.com","Rakmo@gmail.com")),
+                            new Users("Rakmo", 865723, Arrays.asList("Rakmo@gmail.com","om@gmail.com"))
+                        ).toList();
+
+
+            List<String> collectNames = users.stream().map(Users::getName).toList();
+            List<String> collectEmails = users.stream().flatMap(usersEmail -> usersEmail.getEmails().stream()).toList();
+
+            System.out.println("Users Names : "+ collectNames);  //Output:- Users Names : [Omkar, Rakmo]
+            System.out.println("User Emails : "+ collectEmails); //Output:- User Emails : [om@gmail.com, Rakmo@gmail.com, Rakmo@gmail.com, om@gmail.com]
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Q : Can we use this keyword in lambda expression?
+A : No, We can not use this keyword in LE, it refere the global variable.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+Q : Explain yield keywork in java.
+A : yield keyword introduce in the java 14, we can use it for returning the value from the switch case.
+	Example :
+public class Switchjava14 {
+	public static void main(String[] args) {
+    int number = 4;
+
+    String result  = switch (number) {
+        case 5 -> {
+            System.out.println("Matched 5 ");
+            yield "Five";
+        }
+        case 6 -> {
+            System.out.println("Matched 6 ");
+            yield "Six";
+        }
+        case 7 -> {
+            System.out.println("Matched 7 ");
+            yield "Seven";
+        }
+        case 8 -> {
+            System.out.println("Matched 8 ");
+            yield "Eight";
+        }
+        default -> {
+            System.out.println("Nothing Matched");
+            yield "Nothing";
+        }
+    };
+
+    System.out.println("Result from the switch case : "+result);
+
+   }
+}
+
+Q : Can we use this keyword in lambda expression?
+A : No, We can not use this keyword in LE, it refere the global variable.
+	Example:
+	p
+
+
+Q. Stream VS Parallel Stream
+Ans:- Both are used to process object however stream execute in the single core of your machine with sequential flow
+                                      where parallel stream uses the multiple core of your machine.
+
+
+Q.17 What is CompletableFuture?
+Ans:- CompletableFuture is used for asynchronous programming in java. asynchronous programming means writing non-blocking code by running a task on a seperate thread than the main application thread and notifying the main thread about its progress, completion or failure.
+
+Q.18 Why CompletableFuture why not Future?
+Ans:-
+    1.It cannot be manually completed -> Until and unless you dont call .get() it not complete the execution
+    2.You cannot combine multiple futures together
+    3.No Exception Handling
+
+Q. What is the difference between stateless stream api and stateful stream api
+Ans:- stateless stream api means the function that does not depend on the elements on each other
+        Example: filter() function only check the current element for the satisfying condition or not for find the even numbers.
+      stateful stream api means the function that depend on the other elements for giving the expected output.
+        Example: distinct() function depends on the other elements for giving the consolidate unique element of.
+    Note: If any stream operation contains a stateful function, then its considered as the stateful operation.

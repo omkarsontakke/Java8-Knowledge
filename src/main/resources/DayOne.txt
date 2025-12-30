@@ -1,0 +1,38 @@
+Day 1 – Java 8 Questions
+1. When would you use map() vs flatMap() in streams?
+Ans:- Suppose you have employee object and you want to aceeses one field then you can go with map means you want to access single entity,
+      if suppose you want to access one field that contains multiple data, then you can go with the flaptMap.
+
+Give an example scenario where map() fails but flatMap() works.
+    Example:
+            List<String> empNames =  employeeList.stream().map(Employee::getName).toList();
+            System.out.println("Names of employees: " + empNames);
+            List<String> empEmails = employeeList.stream().flatMap(e -> e.getEmail().stream()).toList();
+            System.out.println("Emails of employees: " + empEmails);
+
+2. In which situation would you use Collectors.groupingBy()?
+Ans:- Suppose we have the list of employee and we want to filter the employee based on there department the we can go with the groupingBy() method.
+
+Give a real-time scenario like grouping employees by department.
+    Example:
+        Map<String, List<Employee>> empGrpByDept = employeeList.stream().collect(Collectors.groupingBy(Employee::getDeptartment));
+        System.out.println("Employee Group by Department : "+empGrpByDept);
+
+3. When should you use Optional.of(), Optional.ofNullable(), and Optional.isEmpty()?
+Ans:- Use the .of() method when you certain that value must be present else throw the NPE.
+      Use the .ofNullable() method when you dont have an idea if the value coming is null or not.
+      Use the .isEmpty() method when you want to check the value is holding or not
+Explain scenario-based usage.
+
+4. When do you prefer forEach() vs collect()?
+Ans:- Use forEach() method for perform the operation on the list
+      Use collect() method for returning the new list after the operation.
+Explain when modifying existing list vs creating a  ew transformed list is required.
+ Example:
+    employeeList.stream().map(Employee::getName).forEach(e -> System.out.println(e.toUpperCase()));
+    List<String> collectMethodUse = employeeList.stream().map(Employee::getDeptartment).collect(Collectors.toList());
+    System.out.println(collectMethodUse);
+
+5. When should you use parallelStream() instead of stream()?
+Ans:- When you want to use multiple core of the CPU for permorming the task use the parallelStream(). and you want the fast response
+Give a situation where using parallelStream() actually improves performance.

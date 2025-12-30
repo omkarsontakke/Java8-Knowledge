@@ -1,0 +1,59 @@
+DNS Server -> Global public Directory, that stotred the value in key-value(amazon.com -> 10.2.3.4);
+
+What is Fualt Tolerence?
+a system's ability to continue operating without interruption even if one or more components fail.
+
+
+Types of scaling : Vertical Scalling and Horizontal Scaling.
+
+1.Vertical Scaling:
+	We are increasing resource/capacity of the system like increasing the CPU, RAM, Processor, etc in one system.
+	Drawback: DownTime -> We can not do VS in running machine, coz we have to restart after adding the resources
+2.Horizontal Scaling:
+	In this we use the mutiple server instead of invreaing resouce to at one server.
+	If the traffic is increase we will simultanously increase the server.
+	Issue: how user know the which server we have to req?
+		Sol: Use the load balance(Server) that send or distribute the req to multiple servers. In amazon term we call it as ELB(Elastic Load Balnce
+		Note: we give the LB ip to the DNS. also LB check the health of server that manage the traffic/load to scale.
+	Some times LB also down, bt amazon ELB its has the include micro micro machine, mutiple threads and workers are there they can efficiently handle
+	
+	
+In Microservice architecture service
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+SQS -> Simple Queue System , SQS uses the PULL machinsme (It is ONE:ONE)
+In this 2 terms are there, One is Push machanisme and second is pull
+In pull mechanism the worker/other microservice will pull the req from the Queue system.(In this some specfic time Worker/ms will ask the queue that you have any req?)
+In Push mechanism the Queue system will the push/ send the req to the microservice
+
+
+PUB/SUB Model : (It is ONE:MANY) It uses the event-driven architecture.
+	When to use: When you want to do multiple task when event is trigger
+		Example: When payment is done, You have to send Email(User,Vendor),SMS,etc
+	Drawback: It is not giving acknowledgment
+		
+SNS(Simple Notification Service) :
+	In this case all microservice will lesson to the SNS, If new event is trigger its notified the all microservices that listen the SNS.
+	
+
+FANOUT Architecture:
+	It uses the PUB/SUB and SQS Internally.
+
+Rate Limiting : How to req you send in given time of point.
+	Types of Rate Limiting Strategies
+	1.Leaky Bucket
+	2.Token Bucket  

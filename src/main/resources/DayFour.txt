@@ -1,0 +1,23 @@
+1. When should you use mapToInt(), mapToLong(), or mapToDouble() instead of map()?
+Ans:- When you dont want a Object in a stream then go with the primitive type like above functions.
+
+    Give a scenario where using primitive streams makes the code faster and reduces memory usage.
+        - Suppose you have 10k of employees and you want the sum of the salary of of total emp,
+          so if you used map then its become the slower, use the primitive methods it is fast
+
+
+2. When should you use Collectors.joining()?
+
+    Explain a real-case where you need to produce a comma-separated or JSON-like string from a list of Objects.
+
+3. When is Stream.generate() useful and what danger should you avoid?
+
+    Give a scenario where you need an infinite stream, and explain why you must always use .limit() with it.
+
+4. What is the difference between sorted() and sorted(Comparator)?
+
+    Give a scenario where natural sorting fails and you must provide a comparator.
+
+5. When should you use Stream.concat()?
+
+    Give a scenario where you need to merge two lists or two streams, and explain the performance impact.
