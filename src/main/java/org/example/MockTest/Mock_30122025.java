@@ -8,6 +8,9 @@ public class Mock_30122025 {
     public void newFeature(){
         System.out.println("This is my new feature");
     }
+    public void newFeatureA(){
+        System.out.println("This is my new feature A");
+    }
 }
 
 
