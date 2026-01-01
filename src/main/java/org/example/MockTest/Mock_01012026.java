@@ -49,7 +49,7 @@ public class Mock_01012026 {
         Set<Integer> uniqueEle = new HashSet<>();
 
         List<Integer> duplicateElementInList = numbers1.stream().filter(n1 -> !uniqueEle.add(n1)).sorted().toList();
-
+        // List<Integer> duplicateElementInList = numbers1.stream().filter(n1 -> String.valueOf(n1).startWith("1").toList();
         System.out.println(duplicateElementInList);
 
     }
