@@ -33,7 +33,7 @@ public class Mock_01012026 {
 
 //        System.out.println(collect);
 
-//        3. Find all numbers starting with digit 1 using Java 8
+//       Q. 3. Find all numbers starting with digit 1 using Java 8
         List<Integer> numbers = List.of(10, 15, 22, 18, 34, 19);
 
         List<Integer> numStartingWith1 = numbers.stream().
@@ -43,7 +43,7 @@ public class Mock_01012026 {
 //        System.out.println(numStartingWith1);
 
 
-//        4. Find duplicate elements in a List using Java 8
+//        Q .4. Find duplicate elements in a List using Java 8
         List<Integer> numbers1 = List.of(1, 2, 3, 2, 4, 5, 1);
 
         Set<Integer> uniqueEle = new HashSet<>();
