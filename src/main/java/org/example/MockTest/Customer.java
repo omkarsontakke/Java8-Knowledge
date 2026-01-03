@@ -5,16 +5,23 @@ import java.util.List;
 public class Customer {
     private String name;
     private String city;
+    private int age;
+
     private List<Order> orders;
 
-    public Customer(String name,String city, List<Order> orders) {
+    public Customer(String name,String city,int age, List<Order> orders) {
         this.name = name;
         this.city = city;
+        this.age=age;
         this.orders = orders;
     }
 
     public String getName() {
         return name;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     public List<Order> getOrders() {
