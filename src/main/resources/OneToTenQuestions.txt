@@ -2,7 +2,7 @@ Q.1 What are all features of java8 did you know?
 Ans:- 1.Functional Interface(Include default & static method).
       2.Lambda Expression
       3.Stream
-      4.CompatableFeature
+      4.CompatibleFeature
       5.Java DataTime
 
 ---------------------------------------------------------------------------------------------------------------------------------
@@ -10,16 +10,16 @@ Ans:- 1.Functional Interface(Include default & static method).
 Q.2 What is the Functional Interface?
 Ans:- An Interface that contains only one abstract methods is known as FI.
       Note:  It can have any number of default and static method.
-             default method use: Interface dont force to overide the default method , it total depend on the requiremnt
+             default method use: Interface don't force to override the default method , it totals depend on the requirement
              static method use: If you are using the same login in the Utility class, then you can use it in the Interface for the frequently task.
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
 Q.3 Can you tell few FI which is already there before java 8?
 Ans:- Runnable -> run method is present
-      Callable -> call methos is present
-      Comparator(Interview migh ask about equals() method inside comparator)
-      In Comparator there are two methds, one is compare and second is equal methos that overide from the object class.
+      Callable -> call methods is present
+      Comparator(Interview might ask about equals() method inside comparator)
+      In Comparator there are two methods, one is compare and second is equal methods that override from the object class.
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ Ans: Yes,
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
-Q.5 Can we extends FI from another FI?
+Q.5 Can we extend FI from another FI?
 Ans:- Yes, We can extends bt after extend out Interface don't act as the FI
 
 ---------------------------------------------------------------------------------------------------------------------------------
@@ -56,7 +56,7 @@ Ans:- 1.Function  -> apply method , R apply(T t)
 ---------------------------------------------------------------------------------------------------------------------------------
 
 Q.7 What is the lambda Expression?
-Ans:- LE is basically express instance of FI, In another word It provide a clear and concise way to represent method of a functional using expression.
+Ans:- LE is basically express instance of FI, In another word It provides a clear and concise way to represent method of a functional using expression.
     Example:
 
 ---------------------------------------------------------------------------------------------------------------------------------
@@ -66,7 +66,7 @@ Ans:-
     Adv:
         1.Avoid writing anonymous impl.
         2.It saves a lot of code.
-        3.The code is directly readble without interpretation.
+        3.The code is directly readable without interpretation.
     DisAdv:
         1.Hard to use without an IDE.
         2.Complex to debug.
@@ -87,7 +87,7 @@ Ans:- A Stream is a sequence of object that support various methods which can be
 ---------------------------------------------------------------------------------------------------------------------------------
 
 Q.11 Method Reference
-Ans:- Method refrence is the shorthand notation of a LE to call a method
+Ans:- Method reference is the shorthand notation of a LE to call a method
     Example : numList.stream.filter(n %2 == 0).sorted().forEach(System.out::Println);
     1.Static method reference
     2.Instance method reference
@@ -101,7 +101,7 @@ Ans:- Method refrence is the shorthand notation of a LE to call a method
                 //Using Static method when method is static
                 numbers.stream().filter(number -> number % 2 == 0).forEach( TestClass::printElementsStatic);
 
-                // Using Instead method when method is not an static
+                // Using Instead method when method is not a static
                 numbers.stream().filter(number -> number % 2 == 0).forEach( testClassObj::printElementsNonStatic);
             }
 
@@ -111,7 +111,7 @@ Ans:- Method refrence is the shorthand notation of a LE to call a method
                 System.out.println(i);
             }
 
-            //When mwthod is not an static
+            //When method is not a static
             public void printElementsNonStatic(int i){
                 System.out.println(i);
             }
@@ -142,15 +142,15 @@ Ans:- for 1:1 then go with map, if 1:M then go with the flatMap.
 ---------------------------------------------------------------------------------------------------------------------------------
 
 Q : Can we use this keyword in lambda expression?
-A : No, We can not use this keyword in LE, it refere the global variable.
+A : No, We can not use this keyword in LE, it refers the global variable.
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
 
-Q : Explain yield keywork in java.
+Q : Explain yield keyword in java.
 A : yield keyword introduce in the java 14, we can use it for returning the value from the switch case.
 	Example :
-public class Switchjava14 {
+public class SwitchJava14 {
 	public static void main(String[] args) {
     int number = 4;
 
@@ -183,7 +183,7 @@ public class Switchjava14 {
 }
 
 Q : Can we use this keyword in lambda expression?
-A : No, We can not use this keyword in LE, it refere the global variable.
+A : No, We can not use this keyword in LE, it refers the global variable.
 	Example:
 	p
 
@@ -194,11 +194,11 @@ Ans:- Both are used to process object however stream execute in the single core 
 
 
 Q.17 What is CompletableFuture?
-Ans:- CompletableFuture is used for asynchronous programming in java. asynchronous programming means writing non-blocking code by running a task on a seperate thread than the main application thread and notifying the main thread about its progress, completion or failure.
+Ans:- CompletableFuture is used for asynchronous programming in java. asynchronous programming means writing non-blocking code by running a task on a separate thread than the main application thread and notifying the main thread about its progress, completion or failure.
 
 Q.18 Why CompletableFuture why not Future?
 Ans:-
-    1.It cannot be manually completed -> Until and unless you dont call .get() it not complete the execution
+    1.It cannot be manually completed -> Until and unless you don't call .get() it not complete the execution
     2.You cannot combine multiple futures together
     3.No Exception Handling
 

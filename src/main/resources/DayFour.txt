@@ -1,5 +1,5 @@
 1. When should you use mapToInt(), mapToLong(), or mapToDouble() instead of map()?
-Ans:- When you dont want a Object in a stream then go with the primitive type like above functions.
+Ans:- When you don't want an Object in a stream then go with the primitive type like above functions.
 
     Give a scenario where using primitive streams makes the code faster and reduces memory usage.
         - Suppose you have 10k of employees and you want the sum of the salary of of total emp,
