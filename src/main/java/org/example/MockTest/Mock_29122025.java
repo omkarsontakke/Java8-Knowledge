@@ -9,20 +9,20 @@ public class Mock_29122025 {
     public static void main(String[] args) {
 
         List<Customer> customers = List.of(
-                new Customer("Amit", "Mumbai",21,
+                new Customer("Amit", "Mumbai",21,32100,
                         List.of(
                                 new Order("O1", 1200, "DELIVERED"),
                                 new Order("O2", 800, "NEW")
                         )
                 ),
-                new Customer("Neha", "Pune",33,
+                new Customer("Neha", "Pune",17,11000,
                         List.of(
                                 new Order("O3", 4000, "DELIVERED")
                         )
                 ),
-                new Customer("Rohan", "Mumbai", 42,null),
-                new Customer("Priya", "Delhi",11, List.of()),
-                new Customer("Vikram", "Pune", 21,
+                new Customer("Rohan", "Mumbai",42,82000, null),
+                new Customer("Priya", "Delhi", 33,54000,List.of()),
+                new Customer("Vikram", "Pune", 21,32100,
                         List.of(
                                 new Order("O4", 2500, "CANCELLED"),
                                 new Order("O5", 3200, "DELIVERED")

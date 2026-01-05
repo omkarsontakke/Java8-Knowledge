@@ -7,20 +7,20 @@ import java.util.stream.Stream;
 public class SecondMockTest {
     public static void main(String[] args) {
         List<Customer> customers = List.of(
-                new Customer("Amit", "Mumbai",11,
+                new Customer("Amit", "Mumbai",21,32100,
                         List.of(
                                 new Order("O1", 1200, "DELIVERED"),
                                 new Order("O2", 800, "NEW")
                         )
                 ),
-                new Customer("Neha", "Pune", 23,
+                new Customer("Neha", "Pune",17,11000,
                         List.of(
                                 new Order("O3", 4000, "DELIVERED")
                         )
                 ),
-                new Customer("Rohan", "Mumbai", 31, null),
-                new Customer("Priya", "Delhi", 33, List.of()),
-                new Customer("Vikram", "Pune", 22,
+                new Customer("Rohan", "Mumbai",42,82000, null),
+                new Customer("Priya", "Delhi", 33,54000,List.of()),
+                new Customer("Vikram", "Pune", 21,32100,
                         List.of(
                                 new Order("O4", 2500, "CANCELLED"),
                                 new Order("O5", 3200, "DELIVERED")

@@ -19,8 +19,6 @@ public class Order {
         this.id = id;
     }
 
-
-
     public double getAmount() {
         return amount;
     }
