@@ -7,18 +7,24 @@ public class Customer {
     private String city;
     private int age;
     private int salary;
+    private String isActive;
     private List<Order> orders;
 
-    public Customer(String name,String city,int age,int salary, List<Order> orders) {
+    public Customer(String name,String city,int age,int salary,String isActive, List<Order> orders) {
         this.name = name;
         this.city = city;
         this.age=age;
         this.salary=salary;
+        this.isActive=isActive;
         this.orders = orders;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getIsActive() {
+        return isActive;
     }
 
     public int getAge() {
