@@ -3,9 +3,8 @@ package org.example.MockTest;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-public class Mock_05012025 {
+public class Mock_05012026 {
     public static void main(String[] args) {
 
         List<Customer> customers = List.of(

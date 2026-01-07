@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Mock_02012025 {
+public class Mock_02012026 {
     public static void main(String[] args) {
 //        Q1. Find the first repeating character in a String using Java 8\
 

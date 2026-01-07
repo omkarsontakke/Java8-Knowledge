@@ -6,9 +6,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-public class Mock_07012025 {
+public class Mock_07012026 {
     public static void main(String[] args) {
 
         List<Customer> customers = List.of(
