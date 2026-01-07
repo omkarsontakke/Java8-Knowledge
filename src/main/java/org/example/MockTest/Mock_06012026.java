@@ -97,11 +97,5 @@ public class Mock_06012026 {
                         ));
 
 //        System.out.println(firstCustomerPerCity);
-
-
-
-
-
-
     }
 }

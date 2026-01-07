@@ -46,8 +46,12 @@ public class Customer {
         return "Customer{" +
                 "name='" + name + '\'' +
                 ", city='" + city + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                ", status='" + isActive + '\'' +
                 ", orders=" + orders +
                 '}';
     }
+
 }
 
