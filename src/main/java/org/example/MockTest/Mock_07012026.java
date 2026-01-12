@@ -97,8 +97,12 @@ public class Mock_07012026 {
                 .anyMatch(customer -> customer.getAge() < 18
                         && customer.getIsActive().equalsIgnoreCase("ACTIVE"));
 
-        System.out.println(active);
+//        System.out.println(active);
 
+        System.out.println(addDigits(17));
 
+    }
+    public static int addDigits(int num) {
+        return num%9;
     }
 }
