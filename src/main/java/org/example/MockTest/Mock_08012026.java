@@ -52,17 +52,6 @@ public class Mock_08012026 {
                 )
         );
 
-
-        List<Order> list1 = customers.stream()
-                .filter(n -> n.getOrders() != null)
-                .flatMap(c -> c.getOrders().stream())
-                .mapToInt(Order::getAmount)
-                .sum();
-
-
-        System.out.println(list1);
-
-
     }
 
 }
