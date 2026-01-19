@@ -1,6 +1,7 @@
 package org.example.MockTest;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Customer {
     private String name;
@@ -53,5 +54,17 @@ public class Customer {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return age == customer.age && salary == customer.salary && Objects.equals(name, customer.name) && Objects.equals(city, customer.city) && Objects.equals(isActive, customer.isActive) && Objects.equals(orders, customer.orders);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, city, age, salary, isActive, orders);
+    }
 }
 
