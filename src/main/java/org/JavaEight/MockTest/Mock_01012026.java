@@ -1,11 +1,8 @@
-package org.example.MockTest;
+package org.JavaEight.MockTest;
 
-import javax.management.ValueExp;
-import java.security.Key;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Mock_01012026 {
     public static void main(String[] args) {

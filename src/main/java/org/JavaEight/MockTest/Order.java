@@ -1,4 +1,4 @@
-package org.example.MockTest;
+package org.JavaEight.MockTest;
 
 public class Order {
     private String id;

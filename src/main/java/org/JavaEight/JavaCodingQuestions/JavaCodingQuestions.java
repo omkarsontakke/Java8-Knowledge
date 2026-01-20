@@ -1,4 +1,4 @@
-package org.example.JavaCodingQuestions;
+package org.JavaEight.JavaCodingQuestions;
 
 import java.util.Arrays;
 import java.util.Map;

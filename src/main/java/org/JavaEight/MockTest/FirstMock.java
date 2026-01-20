@@ -1,7 +1,7 @@
-package org.example.MockTest;
+package org.JavaEight.MockTest;
 
-import org.example.JavaExamples.Address;
-import org.example.JavaExamples.Employee;
+import org.JavaEight.JavaExamples.Address;
+import org.JavaEight.JavaExamples.Employee;
 
 import java.util.*;
 import java.util.function.Function;

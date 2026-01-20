@@ -1,4 +1,4 @@
-package org.example.JavaExamples;
+package org.JavaEight.JavaExamples;
 
 import java.util.List;
 import java.util.Objects;

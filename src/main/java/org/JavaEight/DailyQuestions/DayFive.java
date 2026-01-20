@@ -1,7 +1,7 @@
-package org.example.DailyQuestions;
+package org.JavaEight.DailyQuestions;
 
-import org.example.JavaExamples.Address;
-import org.example.JavaExamples.Employee;
+import org.JavaEight.JavaExamples.Address;
+import org.JavaEight.JavaExamples.Employee;
 
 import java.util.ArrayList;
 import java.util.Arrays;

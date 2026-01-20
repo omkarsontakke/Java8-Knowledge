@@ -1,10 +1,8 @@
-package org.example.MockTest;
+package org.JavaEight.MockTest;
 
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class Mock_03012026 {
 

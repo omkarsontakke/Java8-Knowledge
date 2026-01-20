@@ -1,4 +1,4 @@
-package org.example.JavaTheoryAndImpl;
+package org.JavaEight.JavaTheoryAndImpl;
 
 public class AmozonPay implements UPIPayment{
 

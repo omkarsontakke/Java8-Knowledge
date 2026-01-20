@@ -1,8 +1,7 @@
-package org.example.MockTest;
+package org.JavaEight.MockTest;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class SecondMockTest {
     public static void main(String[] args) {

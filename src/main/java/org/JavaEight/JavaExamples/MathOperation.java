@@ -1,4 +1,4 @@
-package org.example.JavaExamples;
+package org.JavaEight.JavaExamples;
 
 @FunctionalInterface
 public interface MathOperation {

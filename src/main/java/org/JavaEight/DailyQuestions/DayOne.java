@@ -1,11 +1,10 @@
-package org.example.DailyQuestions;
+package org.JavaEight.DailyQuestions;
 
-import org.example.JavaExamples.Address;
-import org.example.JavaExamples.Employee;
+import org.JavaEight.JavaExamples.Address;
+import org.JavaEight.JavaExamples.Employee;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class DayOne {

@@ -1,4 +1,4 @@
-package org.example.MockTest;
+package org.JavaEight.MockTest;
 
 import java.util.*;
 import java.util.function.Function;

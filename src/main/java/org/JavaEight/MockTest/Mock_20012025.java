@@ -1,7 +1,9 @@
-package org.example.MockTest;
+package org.JavaEight.MockTest;
 
-import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class Mock_20012025 {
     public static void main(String[] args) {
@@ -33,8 +35,29 @@ public class Mock_20012025 {
 
 //        System.out.println("Total Element Count : "+countOfElement + ", " +size);
 
+//        Question 4: Find the length of each string in a list
 
-        
+        List<String> programmingLanguage = List.of("Java","Python","C","Ruby");
+
+        List<Integer> lenghtOfStringCount = programmingLanguage.stream()
+                .map(String::length)
+                .toList();
+
+        System.out.println(lenghtOfStringCount);
+
+        Map<String, Integer> collect = programmingLanguage.stream()
+                .collect(Collectors.toMap(Function.identity(), String::length
+                ));
+
+//        System.out.println(collect);
+
+
+//        Question 5: Check if any number is greater than a given value
+
+        boolean isGreater = numbers.stream()
+                .anyMatch(num -> num > 7);
+
+        System.out.println(isGreater);
 
     }
 
