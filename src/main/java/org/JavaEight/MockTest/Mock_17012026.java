@@ -65,7 +65,7 @@ public class Mock_17012026 {
         List<String> names = List.of("Omkar","Jayesh","Gaurav","Shlok");
 
         List<String> namesInUpperCase =  names.stream()
-                .map(name -> name.toUpperCase())
+                .map(String::toUpperCase)
                 .toList();
 
 //        System.out.println(namesInUpperCase);
