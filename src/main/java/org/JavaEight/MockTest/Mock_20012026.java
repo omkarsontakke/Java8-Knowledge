@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Mock_20012025 {
+public class Mock_20012026 {
     public static void main(String[] args) {
 //        Question 1: Find maximum number in a list
 

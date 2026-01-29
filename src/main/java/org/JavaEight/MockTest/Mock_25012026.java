@@ -4,11 +4,9 @@ import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-public class Mock_25012025 {
+public class Mock_25012026 {
     public static void main(String[] args) {
         List<Customer> customers = List.of(
                 new Customer("Amit", "Mumbai",21,32100,"Active",
