@@ -79,14 +79,14 @@ public class Mock_29012026 {
                 .filter(order -> order.getAmount() > 2000)
                 .toList();
 
-        List<Customer> orderGreaterThanAmount1 = customers.stream()
+        List<Customer> orderGrxeaterThanAmount1 = customers.stream()
                 .filter(cust -> cust.getOrders() != null)
                 .filter(custOrder -> custOrder.getOrders().stream().anyMatch(
                         order -> order.getAmount() > 2000
                 ))
                 .toList();
 
-        System.out.println(orderGreaterThanAmount1);
+        System.out.println(orderGrxeaterThanAmount1);
 
 
     }
