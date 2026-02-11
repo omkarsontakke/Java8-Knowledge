@@ -61,7 +61,5 @@ public class Mock_11022026 {
 
         System.out.println(firstNonRepeatingCharacter);
 
-        IntStream intStream = numbers.stream().mapToInt(Integer::intValue).;
-
     }
 }
